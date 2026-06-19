@@ -1,0 +1,43 @@
+
+#mods{
+    padding: 0;
+    margin: 0;
+    height: calc(100vh - 70px);
+    display: grid;
+    grid-template-columns: 20vw 50vw 30vw;
+    grid-template-rows: 100%;
+
+    background-color: #F0F0F0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../assets/new-enterprise-logo1.svg");
+}
+#mods>div{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#mods>.lsidebar>*{
+    padding: 8px;
+    background-image: linear-gradient(to bottom,#90E0FF,#6FC0EE);
+}
+
+#mods>.options{
+    display: flex;
+    flex-direction: column;
+}
+
+#mods>.options>:first-child{
+    background-image: linear-gradient(to bottom,#ffffff,#f0f0f0);
+}
+
+#mods>.options>*{
+    padding: 8px;
+    background-image: linear-gradient(to bottom,#90E0FF,#6FC0EE);
+}
+
+.optionActive{
+    background-image: linear-gradient(to bottom,#90E0FF,#2FC0EE);
+
+}

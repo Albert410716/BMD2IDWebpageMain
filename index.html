@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAME - Homepage</title>
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Jockey+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+    
+    <script src="js/menuscript.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div id="menu">
+            <nav>
+                <a href="about.html"><button>The Team</button></a>
+                <a href="gallery.html"><button>Products</button></a>
+                <a href="order.html"><button>Order</button></a>
+                <a href="index.html"><button>Homepage</button></a>
+            </nav>
+            <h1>Menu</h1>
+        </div>
+        <div class="menubutton" tabindex="0">
+            <img src="assets/new-enterprise-logo1.svg" alt="Logo" style="width: 50px;">
+            <img src="assets/menubutton.svg" alt="Menu Button">
+        </div>
+    </header>
+    <main>
+        <div id="spacer"></div>
+        <section id="hero">
+            <h1>Create</h1>
+            <h1>Spaces</h1>
+        </section>
+        <section class="gradientsection">
+            <h1>Design your storage</h1>
+            <a href="app.html"><button>Go Now</button></a>
+        </section>
+        <section id="showcase">
+            <div class="cardgallery">
+                <div>
+                    <a href="app.html?product=shelf1" class="card">
+                        <div id="card1"></div>
+                        <h4>Cabinet Alpha</h4>
+                    </a>
+                    <a href="app.html?product=shelf1" class="card">
+                        <div id="card2"></div>
+                        <h4>Cabinet Beta</h4>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact us</h2>
+            <p>Speak to us and determine what solution is right for you</p>
+            <a href="contact.html"><button>Contact Us</button></a>
+        </section>
+        <footer>
+            <h4>The End</h4>
+            <h5>Quick Links</h5>
+            <div>
+                <p><a href="contact.html?p=contact">Contact Us</a><br><a href="contact.html?p=order">Custom Order</a><br><a href="contact.html?p=problem">Report a Problem</a></p>
+                <p><a href="gallery.html">Product Gallery</a><br><a href="app.html">Modification Viewer</a><br><a href="about.html">The Team</a></p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

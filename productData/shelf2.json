@@ -1,0 +1,29 @@
+{
+    "name":"cabinet2",
+    "variants":[
+        "standing",
+        "shelf",
+        "door"
+    ],
+    "images":{
+        "get":"base",
+        "standing":{
+            "get":"standing",
+            "shelf":{
+                "get":"standingshelf",
+                "door":{
+                "get":"standingshelfdoor"
+                }
+            }
+        },
+        "shelf":{
+            "get":"shelf",
+            "door":{
+                "get":"shelfdoor"
+            }
+        },
+        "door":{
+            "get":"door"
+        }
+    }
+}

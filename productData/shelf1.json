@@ -1,0 +1,29 @@
+{
+    "name":"cabinet1",
+    "variants":[
+        "wide",
+        "shelf",
+        "door"
+    ],
+    "images":{
+        "get":"base",
+        "wide":{
+            "get":"wide",
+            "shelf":{
+                "get":"wideshelf",
+                "door":{
+                "get":"wideshelfdoor"
+                }
+            }
+        },
+        "shelf":{
+            "get":"shelf",
+            "door":{
+                "get":"shelfdoor"
+            }
+        },
+        "door":{
+            "get":"door"
+        }
+    }
+}

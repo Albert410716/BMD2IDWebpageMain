@@ -1,0 +1,287 @@
+
+
+:root{
+    font-size: 18pt;
+    --header-height: 70px;
+    --contact-bg: #F6FFE6;
+    --general-bg: #E6F6FF;
+    --menu-bg:#FFF6E6;
+    --card-width: 40vh;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+h1{
+    font-family: "Jockey One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40pt;
+}
+h2{
+    font-family: "Jockey One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+h3{
+
+}
+h4{
+
+}
+h5{
+
+}
+h6{
+    margin-top: 10px;
+}
+p{
+    font-family: "IBM Plex Sans", sans-serif;
+}
+button{
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    padding: 5px 10px;
+}
+a{
+    text-decoration: none;
+    color: unset;
+}
+
+
+body{
+    margin: 0;
+}
+
+button{
+    border: 0;
+    background-image: linear-gradient(to bottom, #D0D0D0, #A0A0A0);
+}
+
+/*test background*/
+main{
+    
+}
+
+/*header & menu below*/
+header{
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    position: fixed;
+    grid-template-columns: 1fr;
+    top: calc(-100vh + var(--header-height));
+    grid-template-rows: 1fr var(--header-height);
+}
+
+header.open{
+    top: 0;
+}
+
+header>.menubutton{
+    bottom: 0;
+}
+
+#menu{
+    padding: var(--header-height);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-color: var(--menu-bg);
+}
+
+#menu>h1{
+    align-self: flex-start;
+}
+
+#menu>nav{
+    width: 30vw;
+    min-width: 120px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+nav>*{
+    display: block;
+    border-width: 0;
+    margin: 10px;
+    height: 30px;
+}
+nav>*>*{
+    width: 100%;
+    height: 100%;
+}
+
+header>div.menubutton{
+    animation-duration: 2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #D0D0D0, #A0A0A0);
+    height: var(--header-height);
+}
+
+.menubutton:focus{
+    border: 2px solid;
+}
+
+
+/* end header section*/
+
+/**/
+section{
+    padding: 20px 16vw;
+    min-height: 40vh;
+}
+
+/**/
+#hero{
+    background-image: url(../assets/Test-Images/cabinet1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+div#spacer{
+    height: 70px;
+    margin: 0;
+}
+
+.hidden{
+    display: none;
+}
+
+section.gradientsection{
+    background-image: linear-gradient(to top,#FFFFFF,#E8E8E8);
+    box-shadow: 0 0 10px;
+}
+
+section.narrowsection{
+    max-width: 500px;
+    padding: 16px 32px;
+    margin: auto;
+}
+
+/*Card showcase section*/
+section#showcase{
+    padding: 0 0;
+    height: auto;
+}
+.cardgallery{
+    max-width: 100vw;
+}
+.cardgallery>*{
+    background-color: var(--general-bg);
+    display: flex;
+    overflow-x: scroll;
+}
+.card{
+    display: block;
+    height: 50vh;
+    min-width: var(--card-width);
+    max-width: var(--card-width);
+    margin: 16px;
+    padding: 16px;
+    background-color: #C2E9FF;
+    align-content:end;
+}
+.card>div{
+    width: 100%;
+    height: calc(100% - 40px);
+    background-position: center;
+    background-size: cover;
+}
+
+#card1{
+    background-image: url("../assets/new-enterprise-logo1.svg");
+}
+#card2{
+    background-image: url("../assets/new-enterprise-logo1.svg");
+}
+#card3{
+    background-image: url("../assets/new-enterprise-logo1.svg");
+}
+/* cards 2*/
+
+.cards2{
+    background-color: var(--contact-bg);
+    padding: 0 0;
+    height: auto;
+}
+.cards2>h4{
+    padding: 10px 5vw 0px;
+}
+.cards2 .cardgallery>*{
+    background-color: var(--contact-bg);
+}
+
+.imgcontainer{
+    display: flex;
+    justify-content: center;
+}
+
+.imgcontainer>img{
+    height: 180px;
+}
+
+/*Homepage contact section*/
+section#contact{
+    background-color: var(--contact-bg);
+    height: 200px;
+}
+
+footer{
+    background-color: var(--menu-bg);
+    padding: 20px 16vw;
+}
+
+footer>*{
+    margin: 16px;
+}
+
+footer>div{
+    display: flex;
+    justify-content: space-between;
+}
+footer a{
+    font-weight: 300;
+}
+
+/*misc*/
+
+input.long{
+    width: 50%;
+}
+
+.splitlr{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+@media (max-width: 600px) {
+    .splitlr{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+
+/*Animations*/
+@keyframes MenuUp {
+    100% {transform: translateY(0);}
+    0% {transform: translateY(calc(100vh - 70px));}
+}
+
+@keyframes MenuDown {
+    0% {transform: translateY(calc(70px - 100vh));}
+    100% {transform: translateY(0);}
+}
