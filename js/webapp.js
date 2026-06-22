@@ -9,13 +9,13 @@ function changeVariant(shelf,change){
     let allowchange = false;
     let remove = false;
 
-    for (var i in variantslist){
+    for (let i in variantslist){
         if (variantslist[i] == change){
             allowchange = true;
         }
     }
 
-    for (var i in currentVariant){
+    for (let i in currentVariant){
         if (currentVariant[i] == change){
             remove = true;
         }
@@ -26,7 +26,7 @@ function changeVariant(shelf,change){
         if (remove){
             console.log("Removing");
             // remove
-            for (var i in currentVariant){
+            for (let i in currentVariant){
                 if (currentVariant[i] != change){
                     newvariantlist.push(variantslist[i]);
                 }
@@ -34,9 +34,9 @@ function changeVariant(shelf,change){
         }else{
             console.log("Adding");
             // add
-            for (var i in variantslist){
+            for (let i in variantslist){
                 console.log(`item ${i}: ${variantslist[i]}`);
-                if (variantslist[i] in currentVariant || variantslist[i] == change){
+                if (variantslist[i] == change){// make it add more than 1
                     console.log(`pushing ${variantslist[i]}`);
                     newvariantlist.push(variantslist[i]);
                 }
@@ -70,7 +70,7 @@ function loadVariantButtons(shelf){
     let optionsHtml = `
     <div>Options</div>
     `;
-    for (var i in shelf.variants){
+    for (let i in shelf.variants){
         if(currentVariant == shelf.variants[i]){
             optionsHtml += `
             <div class="option${shelf.variants[i]} optionActive">
@@ -90,8 +90,8 @@ function loadVariantButtons(shelf){
     optionsmenu.innerHTML = optionsHtml;
     console.log("HTML modified, adding listeners");
 
-    for (var i in shelf.variants){
-        var item = document.querySelector(`.option${shelf.variants[i]}`);
+    for (let i in shelf.variants){
+        let item = document.querySelector(`.option${shelf.variants[i]}`);
         console.log(`giving .option${shelf.variants[i]} Eventlistener with: ${shelf} | ${shelf.variants} | ${shelf.variants[i]}`);
         item.addEventListener("click",() => changeVariant(shelf,shelf.variants[i]));
         
@@ -105,7 +105,7 @@ function loadImage(shelf){
     let filename = shelf.name;
 
     console.log("Applying Variant");
-    for (var v in currentVariant){
+    for (let v in currentVariant){
         console.log(v);
         filename += currentVariant[v];
     }
