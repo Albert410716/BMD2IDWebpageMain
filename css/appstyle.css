@@ -7,9 +7,9 @@
     grid-template-columns: 20vw 50vw 30vw;
     grid-template-rows: 100%;
 
-    background-color: #F0F0F0;
+    background-color: #333333;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-image: url("../assets/new-enterprise-logo1.svg");
 }

@@ -29,9 +29,10 @@ for(var i=0;i<data.length;i++){
     let name = data[i].product_name;
     let internalname = data[i].modifications_json.name;
     let imgsrc = data[i].modifications_json.images.get;
+    console.log(`img: ${internalname}${imgsrc}.png`);
     content += `
-    <a class="card">
-        <div style="background-image: url(assets/products/${internalname}${imgsrc}.png);"></div>
+    <a class="card" href="app.html?p=${name}">
+        <div style="background-image: url(assets/images/${internalname}${imgsrc}.png);"></div>
         <h4>${name}</h4>
     </a>
     `
