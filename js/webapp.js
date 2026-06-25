@@ -2,6 +2,8 @@
 let currentShelf = 0;
 let currentVariant = [];
 
+
+
 function changeVariant(shelf,change){
     console.log(`Changing Variant, current--${currentVariant}-- change--${change}--`);
     let variantslist = shelf.variants;

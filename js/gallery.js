@@ -25,13 +25,14 @@ console.log("Gallery Loading 2");
 console.log(data);
 console.log(data[0].modifications_json.images.get)
 
-for(var i=0;i<data.length;i++){
+for(let i=0;i<data.length;i++){
     let name = data[i].product_name;
     let internalname = data[i].modifications_json.name;
     let imgsrc = data[i].modifications_json.images.get;
+    let id = data[i].id;
     console.log(`img: ${internalname}${imgsrc}.png`);
     content += `
-    <a class="card" href="app.html?p=${name}">
+    <a class="card" href="app.html?p=${id}">
         <div style="background-image: url(assets/images/${internalname}${imgsrc}.png);"></div>
         <h4>${name}</h4>
     </a>
